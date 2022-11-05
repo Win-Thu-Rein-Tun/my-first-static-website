@@ -1,0 +1,748 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700;800&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+/* 🡇🡇🡇 Top Navigation Menu Bar Start Codeline 🡇🡇🡇 */
+
+nav {
+    background: #000066;
+}
+nav:after {
+    content: '';
+    clear: both;
+    display: table;
+}
+nav .logo {
+    position: relative;
+    float: left;
+    color: rgb(255, 255, 255);
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 70px;
+    letter-spacing: 10px;
+}
+nav .img {
+    float: left;
+    height: 50px;
+    margin-top: 10px;
+    padding-left: 60px;
+    padding-right: 10px;
+}
+nav ul {
+    float: right;
+    margin-right: 40px;
+    position: relative;
+    font-family: "Poppins", sans-serif;
+}
+nav ul li {
+    display: inline-block;
+    background: #000066;
+    margin: 0 5px;
+}
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    line-height: 70px;
+    font-size: 18px;
+    padding: 8px 15px;
+    font-style: normal;
+    font-weight: 400;
+}
+nav ul li a:hover {
+    color: cyan;
+    border-radius: 10px;
+    box-shadow: 0 0 3px #33ffff,
+                0 0 7px #66ffff;
+}
+nav ul ul li a:hover {
+    color: cyan;
+    box-shadow: none;
+}
+nav ul ul {
+    position: absolute;
+    border-radius: 5px;
+    top: 100px;
+    border-top: 1px solid cyan;
+    opacity: 0;
+    visibility: hidden;
+    transition: top .4s;
+    list-style: none;
+    z-index: 1;
+}
+nav ul li:hover > ul {
+    top: 70px;
+    opacity: 1;
+    visibility: visible;
+}
+nav ul ul li {
+    position: relative;
+    margin: 0px;
+    width: 270px;
+    float: none;
+    display: list-item;
+    border-bottom: 1px solid rgba(0, 217, 255, 0.3);
+}
+nav ul ul li:first-child {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+nav ul ul li:last-child {
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+nav ul ul li a {
+    line-height: 30px;
+    display: list-item;
+}
+.show, .icon, input {
+    display: none;
+}
+@media all and (max-width: 1200px) {
+    nav ul {
+        width: 100%;
+        margin-right: 0px;
+        float: left;
+    }
+    nav .img {
+        padding-left: 20px;
+    }
+    nav ul li, nav ul ul li {
+        display: block;
+        width: 100%;
+    }
+    nav ul ul {
+        top: 70px;
+        position: static;
+        border: none;
+        float: none;
+        display: none;
+        opacity: 1;
+        visibility: visible;
+    }
+    nav ul ul li {
+        border-bottom: 0px;
+    }
+    nav ul ul a {
+        padding-left: 40px;
+    }
+    .show {
+        display: block;
+        color: white;
+        font-size: 18px;
+        padding: 0 20px;
+        line-height: 70px;
+        cursor: pointer;
+    }
+    .show:hover {
+        color: cyan;
+    }
+    .icon {
+        display: block;
+        color: white;
+        position: absolute;
+        right: 40px;
+        line-height: 70px;
+        font-size: 25px;
+        cursor: pointer;
+    }
+    nav ul li a:hover {
+        box-shadow: none;
+    }
+    .show + a, ul {
+        display: none;
+    }
+    [id^=btn]:checked + ul {
+        display: block;
+    }
+}
+
+/* 🡅🡅🡅 Top Navigation Menu Bar End Codeline 🡅🡅🡅 */
+
+                /* Line Break */
+
+/* 🡇🡇🡇 Slide Show Image Start Codeline 🡇🡇🡇 */
+
+figure {
+    font-family: Istok Web, sans-serif;
+    font-weight: 100;
+}
+#captioned-gallery {
+    width: 100%;
+    overflow: hidden;
+}
+.slider {
+    position: relative;
+    width: 500%;
+    font-size: 0;
+    animation: 30s slidy infinite;
+}
+.slider figure {
+    width: 20%;
+    height: auto;
+    display: inline-block;
+    position: inherit;
+}
+.slider img {
+    width: 100%;
+    height: auto;
+}
+.slider figure figcaption {
+    position: absolute;
+    bottom: 0;
+    background: rgba(0,0,0,0.4);
+    color: #fff;
+    width: 100%;
+    font-size: 5rem;
+    padding: .6rem;
+}
+
+@keyframes slidy {
+0% { left: 0%; }
+20% { left: 0%; }
+25% { left: -100%; }
+45% { left: -100%; }
+50% { left: -200%; }
+70% { left: -200%; }
+75% { left: -300%; }
+95% { left: -300%; }
+100% { left: -400%; }
+}
+@media (max-width: 950px) {
+    .slider figure figcaption {
+        font-size: 3rem;
+    }
+}
+@media (max-width: 450px) {
+    .slider figure figcaption {
+        font-size: 1.5rem;
+    }
+}
+
+  /* 🡅🡅🡅 Slide Show Image End Codeline 🡅🡅🡅 */
+
+                /* Line Break */
+
+  /* 🡇🡇🡇 Text with animation Start Codeline 🡇🡇🡇 */
+
+.home-container {
+    background: #003366;
+}
+
+.main {
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 300px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* background: #1B328A; */
+    color: rgb(255, 255, 255);
+}
+.main .content {
+    padding-right: 25px;
+    flex-grow: 1;
+}
+.main .content h2 {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    color: chartreuse;
+    font-size: 2em;
+    transition: 0.5s;
+    transform-origin: left;
+    transform: scaleX(0);
+}
+.main .content h2[data-scroll="in"] {
+    transform: scaleX(1);
+}
+.main .content h2:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: cyan;
+    border-radius: 10px;
+    transform-origin: right;
+    transition: 0.5s;
+}
+.main .content h2[data-scroll="in"]:before {
+    transform: scaleX(0);
+    transition-delay: 0.5s;
+}
+.main .content h3 {
+    position: relative;
+    margin: 5px 0 0;
+    padding: 0;
+    display: inline-block;
+    color: aqua;
+    font-size: 1.5em;
+    transition: 0.5s;
+    transform-origin: right;
+    transform: scaleX(0);
+}
+.main .content h3[data-scroll="in"] {
+    transform: scaleX(1);
+}
+.main .content h3:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: springgreen;
+    border-radius: 10px;
+    transform-origin: left;
+    transition: 0.5s;
+}
+.main .content h3[data-scroll="in"]:before {
+    transform: scaleX(0);
+    transition-delay: 0.5s;
+}
+@media (max-width: 1200px) {
+    .main .content {
+        padding: 20px 0px;
+        width: 100%;
+        height: 150px;
+        text-align: center;
+    }
+    .main {
+        flex-wrap: wrap;
+        height: auto;
+    }
+}
+
+    /* 🡅🡅🡅 Text with animation End Codeline 🡅🡅🡅 */
+
+                /* Line Break */
+
+    /* 🡇🡇🡇 Image with Text Start Codeline 🡇🡇🡇 */
+
+.main-2 {
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 680px;
+    /* background: #1B328A; */
+    overflow: hidden;
+}
+.main-2 .content-2 {
+    flex-grow: 1;
+    padding-left: 33px;
+
+}
+.main-2 .content-2 h1 {
+    font-family: "Poppins", sans-serif;
+    font-size: 1.5em;
+    margin-top: 50px;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    text-shadow: 2px 2px 5px rgb(0, 0, 0);
+}
+.main-2 .content-2 .img-2 {
+    width: 350px;
+    height: 300px;
+    border-radius: 30px;
+    display: block;
+    margin: 50px auto;
+    box-shadow: 0px 2px 5px 2px rgb(0, 0, 0);
+}
+.main-2 .content-2 p {
+    text-align: center;
+    color: rgb(255, 255, 255);
+    text-shadow: 1px 1px 1px rgb(0, 0, 0);
+    font-size: 1.3em;
+    padding: 0px 20px;
+}
+@media (max-width: 1200px) {
+    .main-2 .content-2 {
+        width: 100%;
+        height: 700px;
+    }
+    .main-2 {
+        flex-wrap: wrap;
+        height: auto;
+    }
+}
+@media (max-width: 430px) {
+    .main-2 .content-2 {
+        padding-left: 0px;
+        height: 560px;
+    }
+    .main-2 .content-2 .img-2 {
+        width: 250px;
+        height: 200px;
+    }
+}
+
+    /* 🡅🡅🡅 Image with text End Codeline 🡅🡅🡅 */
+
+                /* Line Break */
+
+    /* 🡇🡇🡇 Our Technology Partners Start Codeline 🡇🡇🡇 */
+
+.header-2 {
+    height: 150px;
+    /* background: #1B328A; */
+    text-align: center;
+    line-height: 150px;
+    font-size: 1.5em;
+    color: white;
+    text-shadow: 2px 2px 5px rgb(0, 0, 0);
+}
+.main-3 {
+    display: flex;
+    height: 300px;
+}
+.main-3 .content-3 {
+    flex-grow: 1;
+    /* background: #1B328A; */
+}
+.img-3-1, .img-3-2, .img-3-3 {
+    height: 160px;
+    margin: 20px auto 40px auto;
+    display: block;
+    border-radius: 12px;
+    transform: translateY(10%);
+    animation: floater 2.5s infinite;
+    transition: ease 0.5s;
+}
+@keyframes floater {
+    0%{transform: translateY(10%);transition: ease 0.5s;}
+    50%{transform: translateY(-10%);transition: ease 0.5s;}
+  }
+@media (max-width: 1200px) {
+    .content-3 {
+        width: 100%;
+        height: 200px;
+    }
+    .img-3-1, .img-3-2, .img-3-3 {
+        margin: 0px auto;
+    }
+    .main-3 {
+        flex-wrap: wrap;
+        height: auto;
+    }
+}
+@media (max-width: 650px) {
+    .header-2 {
+        font-size: 1em;
+    }
+}
+@media (max-width: 430px) {
+    .header-2 {
+        font-size: 0.8em;
+    }
+}
+
+    /* 🡅🡅🡅  Our Technology Partners End Codeline 🡅🡅🡅 */
+
+                    /* Line Break */
+
+    /* 🡇🡇🡇 You Tube Start Codeline 🡇🡇🡇 */
+
+.main-4 {
+    display: flex;
+    height: 650px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 5px 2px rgb(0, 0, 0);
+    margin: 0 20px;
+    /* background: #1B328A; */
+}
+.main-4 .content-4-1 {
+    flex-grow: 1;
+}
+.main-4 .content-4-1 h1 {
+    color: white;
+    text-shadow: 2px 2px 5px rgb(0, 0, 0);
+    font-size: 3em;
+    padding-top: 50px;
+    padding-left: 80px;
+    margin-bottom: 10px;
+}
+.main-4 .content-4-1 h2 {
+    padding-left: 80px;
+    margin-bottom: 10px;
+    color: aqua;
+    text-shadow: 2px 2px 5px rgb(0, 0, 0);
+}
+.main-4 .content-4-1 ul {
+    display: block;
+    margin-top: 10px;
+    padding-left: 150px;
+    margin-bottom: 10px;
+    list-style-type: square;
+}
+.main-4 .content-4-1 ul li {
+    line-height: 30px;
+    color: #f2f2f2;
+    text-shadow: 2px 2px 5px rgb(0, 0, 0);
+}
+.main-4 .content-4-2 {
+    width: 800px;
+    padding-top: 220px;
+}
+.main-4 .content-4-2 iframe {
+    width: 100%;
+    max-width: 500px;
+    height: 300px;
+    display: block;
+    margin: 0px auto;
+}
+@media (max-width: 1200px) {
+    .main-4 {
+        flex-wrap: wrap;
+        height: auto;
+    }
+    .main-4 .content-4-1 {
+        width: 100%;
+        height: 800px;
+    }
+    .main-4 .content-4-1 h1 {
+        padding-left: 20px;
+    }
+    .main-4 .content-4-1 h2 {
+        padding-left: 20px;
+    }
+    .main-4 .content-4-1 ul {
+        padding-left: 60px;
+    }
+    .main-4 .content-4-1 ul li {
+        line-height: 40px;
+    }
+    .main-4 .content-4-2 {
+        width: 100%;
+        padding-top: 40px;
+        height: 450px;
+    }
+    .main-4 .content-4-2 iframe {
+        width: 90%;
+        margin: 0 auto;
+    }
+}
+/* @media (max-width: 600px) {
+    .main-4 .content-4-2 iframe {
+        width: 430px;
+    }
+}
+@media (max-width: 430px) {
+    .main-4 .content-4-2 iframe {
+        width: 350px;
+    }
+} */
+        /* 🡅🡅🡅  You Tube End Codeline 🡅🡅🡅 */
+
+                /* Line Break */
+
+        /* 🡇🡇🡇 Why Us Start Codeline 🡇🡇🡇 */
+
+.header-3 {
+    height: 150px;
+    /* background: #1B328A; */
+    text-align: center;
+    line-height: 150px;
+    color: white;
+    text-shadow: 2px 2px 5px rgb(0, 0, 0);
+}
+.main-5 {
+    display: flex;
+    height: 300px;
+    /* background: #1B328A; */
+}
+.main-5 .content-5-1 {
+    flex-grow: 80%;
+    box-shadow: 0px 2px 5px 2px rgb(0, 0, 0);
+    margin: 10px 10px;
+    border-radius: 10px;
+    
+}
+.main-5 .content-5-2 {
+    flex-grow: 1;
+    box-shadow: 0px 2px 5px 2px rgb(0, 0, 0);
+    margin: 10px 10px;
+    border-radius: 10px;
+}
+.main-5 .content-5-3 {
+    width: 80%;
+    box-shadow: 0px 2px 5px 2px rgb(0, 0, 0);
+    margin: 10px 10px;
+    border-radius: 10px;
+}
+.main-5 .content-5-1 p,
+.main-5 .content-5-2 p,
+.main-5 .content-5-3 p {
+    color: rgb(255, 255, 255);
+    text-shadow: 2px 2px 5px rgb(0, 0, 0);
+    padding: 20px 20px;
+    font-size: 1.2em;
+}
+@media (max-width: 1200px) {
+    .main-5 .content-5-1,
+    .main-5 .content-5-2,
+    .main-5 .content-5-3 {
+        width: 100%;
+        height: 160px;
+        text-align: center;
+        margin: 10px 10px;
+    }
+    .main-5 {
+        flex-wrap: wrap;
+        height: auto;
+    }
+}
+
+    /* 🡅🡅🡅  Why Us End Codeline 🡅🡅🡅 */
+
+            /* Line Break */
+
+    /* 🡇🡇🡇 Footer Start Codeline 🡇🡇🡇 */
+
+.main-6 {
+    display: flex;
+    height: 300px;
+    background: #000066;
+}
+.main-6 .content-6-1 {
+    flex-grow: 1;
+    padding: 50px 20px;
+}
+.main-6 .content-6-1 p {
+    color: rgb(255, 255, 255);
+    text-shadow: 2px 2px 5px rgb(0, 0, 0);
+    padding: 20px 0px;
+    font-size: 1.2em;
+    display: inline-block;
+}
+.main-6 .content-6-1 img {
+    border-radius: 10px;
+    margin-right: 20px;
+}
+.main-6 .content-6-2 {
+    flex-grow: 1;
+    padding-top: 50px;
+}
+.main-6 .content-6-2 img {
+    border-radius: 10px;
+}
+.main-6 .content-6-3 {
+    width: 31%;
+    padding-top: 50px;
+}
+.main-6 .content-6-3 h3 {
+    display: inline-block;
+    color: whitesmoke;
+    text-shadow: 2px 2px 5px rgb(0, 0, 0);
+    font-weight: 200;
+}
+.fa-2x {
+    color: whitesmoke;
+}
+@media (max-width: 1200px) {
+    .main-6 .content-6-1 {
+        width: 100%;
+        height: 200px;
+    }
+    .main-6 .content-6-1 img {
+        float: left;
+        margin-right: 20px;
+    }
+    .main-6 .content-6-2 {
+        width: 100%;
+        height: 200px;
+        padding-left: 20px;
+    }
+    .main-6 .content-6-3 {
+        width: 100%;
+        height: 300px;
+        padding-left: 20px;
+    }
+    .main-6 {
+        flex-wrap: wrap;
+         height: auto;
+    }
+}
+@media (max-width: 546px) {
+    .main-6 .content-6-1 {
+        height: 280px;
+    }
+    .main-6 .content-6-1 p {
+        padding-left: 0px;
+    }
+}
+@media (max-width: 380px) {
+    .main-6 .content-6-1 {
+        width: 100%;
+        height: 300px;
+    }
+}
+
+    /* 🡅🡅🡅  Footer End Codeline 🡅🡅🡅 */
+
+            /* Line Break */
+
+    /* 🡇🡇🡇 Privacy Policy Start Codeline 🡇🡇🡇 */
+
+            /* Empty Code */
+
+    /* 🡅🡅🡅  Privacy Policy End Codeline 🡅🡅🡅 */
+
+            /* Line Break */
+
+    /* 🡇🡇🡇 Contact Start Codeline 🡇🡇🡇 */
+
+.c-main {
+    display: flex;
+    flex-direction: row;
+    color: white;
+    background: #003366;
+    padding: 100px 0 100px 20px;
+    height: 550px;
+}
+.c-main ul {
+    display: block;
+}
+.c-main li {
+    list-style: none;
+    margin: 10px;
+    font-size: 1.5em;
+}
+.c-main li a {
+    color: aqua;
+}
+.c-main .content-1 {
+    flex-grow: 1;
+}
+.c-main .content-2 {
+    flex-grow: 1;
+}
+@media (max-width: 1000px) {
+    .c-main {
+        height: auto;
+        flex-direction: column;
+    }
+    .c-main .content-2 {
+        margin-top: 50px;
+    }
+}
+@media (max-width: 480px) {
+    .c-main li {
+        font-size: 1.2em;
+    }
+}
+
+    /* 🡅🡅🡅  Contact End Codeline 🡅🡅🡅 */
+
+            /* Line Break */
+
+    /* 🡇🡇🡇 Contact Start Codeline 🡇🡇🡇 */
+

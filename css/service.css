@@ -1,0 +1,230 @@
+.pms {
+    background: #003366;
+    color: white;
+    height: 300px;
+}
+.pms > h1 {
+    text-align: center;
+    padding-top: 50px;
+    color: aqua;
+    text-shadow: 2px 2px 5px rgb(0, 0, 0);
+}
+.pms div > h3 {
+    display: inline-block;
+    font-weight: 500;
+    margin-left: 80px;
+    margin-right: 80px;
+}
+.pms > div {
+    text-align: center;
+    margin-top: 80px;
+}
+.irf {
+    font-style: italic;
+    color: red;
+    /* text-shadow: 2px 2px 1px black; */
+}
+.ss {
+    padding: 50px 0 50px 50px;
+    background: #003366;
+    color: white;
+}
+.ss h1 {
+    color: aqua;
+    text-shadow: 2px 2px 5px black;
+    text-align: center;
+}
+.ss h3 {
+    font-weight: 500;
+    margin: 20px 0;
+}
+.ss p {
+    margin: 8px 0;
+}
+.ss select {
+    border: 2px solid black;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.ss label {
+    display: block;
+    margin-top: 50px;
+}
+.ss input[type=submit] {
+    display: inline-block; 
+    border-radius: 10px;
+    width: 100px; 
+    height: 50px;
+    cursor: pointer;
+}
+.ss input[type=submit]:hover {
+    opacity: 0.5;
+}
+@media (max-width: 1200px) {
+    .pms {
+        height: 400px;
+    }
+    .pms div > h3 {
+        line-height: 80px;
+    }
+    .pms > div {
+        margin-top: 30px;
+    }
+}
+@media (max-width: 450px) {
+    .pms {
+        height: 550px;
+    }
+    .pms div > h3 {
+        line-height: 80px;
+    }
+    .pms > div {
+        margin-top: 30px;
+    }
+    .ss {
+        padding: 50px 10px;
+    }
+}
+.sfrh {
+    font-size: 3em;
+    text-align: center;
+    font-weight: 400;
+    padding: 100px 0;
+    background: #003366;
+    color: white;
+    text-shadow: 2px 2px 5px black;
+}
+.sfr {
+    display: block;
+    list-style: none;
+    margin: 0;
+    padding: 8px 8px 0 8px;
+    background: #003366;
+    overflow: hidden;
+}
+.sfr li {
+    width: 180px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    float: left;
+    margin-right: 4px;
+    background: #2596be;
+    color: white;
+    cursor: pointer;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+.sfr li:first-child {
+    width: 400px;  
+}
+.sfr li:nth-child(3) {
+    width: 300px;
+    
+}
+#square-2 {
+    opacity: 0.5;
+}
+#square-3 {
+    opacity: 0.5;
+}
+#square-4 {
+    opacity: 0.5;
+}
+#circle-1, #circle-2,
+#circle-3, #circle-4 {
+    border-top: 0 none;
+}
+#circle-2 {
+    display: none;
+}
+#circle-3 {
+    display: none;
+}
+#circle-4 {
+    display: none;
+}
+.sfrb {
+    display: flex;
+    flex-direction: row;
+    background: #2596be;
+}
+.sfrft {
+    padding: 50px 0 50px 50px;
+    color: white;
+}
+.sfrft h1 {
+    color: white;
+    text-shadow: 2px 2px 5px black;
+    text-align: center;
+}
+.sfrft h3 {
+    font-weight: 500;
+    margin: 20px 0;
+}
+.sfrft p {
+    margin: 8px 0;
+}
+.sfrft label {
+    display: block;
+    margin-top: 50px;
+}
+.sfrft input[type=submit] {
+    display: inline-block; 
+    border-radius: 10px; 
+    color: white;
+    background: #000066;
+    border: 1px solid black;
+    width: 100px; 
+    height: 50px;
+    cursor: pointer;
+}
+.sfrft input[type=submit]:hover {
+    opacity: 0.5;
+}
+.sfrft-2 img {
+    display: block;
+    padding: 220px 20px;
+    margin: 0 auto;
+    max-width: 502px;
+    width: 100%;
+    border-radius: 10px;
+}
+@media (max-width: 1200px) {
+    .sfr {
+        display: block;
+        list-style: none;
+        margin: 0;
+        padding: 8px 8px 20px 8px;
+        background: #003366;
+        overflow: hidden;
+    }
+    .sfr li {
+        width: 100%;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+    }
+    .sfr li:first-child {
+        width: 100%;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+    }
+    .sfr li:nth-child(3) {
+        width: 100%;
+        
+    }
+    .sfr li:last-child {
+        width: 100%;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+    }
+    .sfrb {
+        flex-direction: column;
+    }
+    .sfrft {
+        padding: 50px 10px 50px 10px;
+    }
+    .sfrft-2 img {
+        padding: 20px 10px;
+    }
+}
